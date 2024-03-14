@@ -19,9 +19,7 @@ import org.slf4j.Logger;
 @Mod(BetterPvP.MODID)
 public class BetterPvP
 {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "betterpvp";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     public BetterPvP()
     {
