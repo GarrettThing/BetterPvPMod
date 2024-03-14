@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "betterpvp:enderite"
+    }
+
+  },
+  "result": {
+    "item": "betterpvp:enderite_block"
+  }
+}

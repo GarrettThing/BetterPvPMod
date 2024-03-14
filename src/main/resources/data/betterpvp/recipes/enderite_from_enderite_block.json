@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+    "item": "betterpvp:enderite_block"
+    }
+  ],
+  "result": {
+    "item": "betterpvp:enderite",
+    "count": 9
+  }
+}

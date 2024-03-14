@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "betterpvp:enderite_scrap"
+    },
+    {
+      "item": "betterpvp:enderite_scrap"
+    },
+    {
+      "item": "betterpvp:enderite_scrap"
+    },
+    {
+      "item": "betterpvp:enderite_scrap"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "betterpvp:enderite"
+  }
+}
