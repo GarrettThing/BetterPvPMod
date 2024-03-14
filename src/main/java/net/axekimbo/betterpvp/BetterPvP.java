@@ -1,6 +1,10 @@
 package net.axekimbo.betterpvp;
 
 import com.mojang.logging.LogUtils;
+import net.axekimbo.betterpvp.block.ModBlocks;
+import net.axekimbo.betterpvp.item.ModCreativeModeTabs;
+import net.axekimbo.betterpvp.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,6 +29,11 @@ public class BetterPvP
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -40,6 +49,11 @@ public class BetterPvP
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.ENDERITE);
+            event.accept(ModItems.ENDERITE_SCRAP);
+
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
