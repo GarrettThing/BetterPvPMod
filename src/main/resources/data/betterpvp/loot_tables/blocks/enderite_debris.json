@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "betterpvp.enderite_debris"
+          "name": "betterpvp:enderite_debris"
         }
       ],
       "rolls": 1.0
