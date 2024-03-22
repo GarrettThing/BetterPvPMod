@@ -15,11 +15,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        BlockWithItem(ModBlocks.ENDERITE_BLOCK);
-        BlockWithItem(ModBlocks.ENDERITE_DEBRIS);
+        blockWithItem(ModBlocks.ENDERITE_BLOCK);
+        blockWithItem(ModBlocks.ENDERITE_DEBRIS);
     }
 
-    private void BlockWithItem(RegistryObject<Block> blockRegistryObject){
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject){
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }

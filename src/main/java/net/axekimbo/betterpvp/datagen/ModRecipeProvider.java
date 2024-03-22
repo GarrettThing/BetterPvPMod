@@ -5,6 +5,7 @@ import net.axekimbo.betterpvp.block.ModBlocks;
 import net.axekimbo.betterpvp.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -16,6 +17,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    private static final List<ItemLike> ENDERITE_DEBRIS = List.of(ModBlocks.ENDERITE_BLOCK.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -24,8 +26,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
-        oreSmelting(pRecipeOutput, (List<ItemLike>) ModBlocks.ENDERITE_DEBRIS.get(), RecipeCategory.MISC, ModItems.ENDERITE_SCRAP.get(), .25f, 200, "enderite_scrap");
-        oreBlasting(pRecipeOutput, (List<ItemLike>) ModBlocks.ENDERITE_DEBRIS.get(), RecipeCategory.MISC, ModItems.ENDERITE_SCRAP.get(), .25f, 100, "enderite_scrap");
+
+        oreSmelting(pRecipeOutput, ENDERITE_DEBRIS, RecipeCategory.MISC, ModItems.ENDERITE_SCRAP.get(), .25f, 200, "enderite_scrap");
+        oreBlasting(pRecipeOutput, ENDERITE_DEBRIS, RecipeCategory.MISC, ModItems.ENDERITE_SCRAP.get(), .25f, 100, "enderite_scrap");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENDERITE.get(), 1)
                 .requires(ModItems.ENDERITE_SCRAP.get(),4)
@@ -33,10 +36,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ENDERITE_SCRAP.get()), has(ModItems.ENDERITE_SCRAP.get()))
                 .save(pRecipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENDERITE.get(), 9)
-                .requires(ModBlocks.ENDERITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ENDERITE_BLOCK.get()), has(ModBlocks.ENDERITE_BLOCK.get()))
-                .save(pRecipeOutput);
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENDERITE.get(), 9)
+//                .requires(ModBlocks.ENDERITE_BLOCK.get())
+//                .unlockedBy(getHasName(ModBlocks.ENDERITE_BLOCK.get()), has(ModBlocks.ENDERITE_BLOCK.get()))
+//                .save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENDERITE_BLOCK.get(), 1)
                 .pattern("SSS")
