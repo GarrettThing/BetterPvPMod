@@ -6,6 +6,7 @@ import net.axekimbo.betterpvp.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -36,6 +37,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ENDERITE_SCRAP.get()), has(ModItems.ENDERITE_SCRAP.get()))
                 .save(pRecipeOutput);
 
+
+
 //        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENDERITE.get(), 9)
 //                .requires(ModBlocks.ENDERITE_BLOCK.get())
 //                .unlockedBy(getHasName(ModBlocks.ENDERITE_BLOCK.get()), has(ModBlocks.ENDERITE_BLOCK.get()))
@@ -49,7 +52,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ENDERITE.get()), has(ModItems.ENDERITE.get()))
                 .save(pRecipeOutput);
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get(), 2)
+                .pattern("DsD")
+                .pattern("DED")
+                .pattern("DDD")
+                .define('D', Items.DIAMOND)
+                .define('E', ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get())
+                .define('s', Items.END_STONE)
+                .unlockedBy(getHasName(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()), has(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()))
+                .save(pRecipeOutput);
 
 
     }

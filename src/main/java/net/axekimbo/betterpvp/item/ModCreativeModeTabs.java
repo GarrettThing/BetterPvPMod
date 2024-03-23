@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) ->{
                         pOutput.accept(ModItems.ENDERITE.get());
                         pOutput.accept(ModItems.ENDERITE_SCRAP.get());
+                        pOutput.accept(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get());
 
                         pOutput.accept(ModBlocks.ENDERITE_DEBRIS.get());
                         pOutput.accept(ModBlocks.ENDERITE_BLOCK.get());

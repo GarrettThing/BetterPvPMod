@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.ENDERITE);
         simpleItem(ModItems.ENDERITE_SCRAP);
+        simpleItem(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

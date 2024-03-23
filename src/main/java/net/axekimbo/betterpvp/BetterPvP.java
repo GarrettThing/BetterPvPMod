@@ -52,6 +52,7 @@ public class BetterPvP
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENDERITE);
             event.accept(ModItems.ENDERITE_SCRAP);
+            event.accept(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
 
         }
     }
