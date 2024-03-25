@@ -1,12 +1,10 @@
 package net.axekimbo.betterpvp.datagen;
 
 import net.axekimbo.betterpvp.BetterPvP;
-import net.axekimbo.betterpvp.block.ModBlocks;
 import net.axekimbo.betterpvp.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -31,4 +29,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
     }
+
+
 }

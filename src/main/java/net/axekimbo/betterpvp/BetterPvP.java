@@ -21,12 +21,11 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BetterPvP.MODID)
-public class BetterPvP
-{
+public class BetterPvP {
     public static final String MODID = "betterpvp";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public BetterPvP()
-    {
+
+    public BetterPvP() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
@@ -42,14 +41,12 @@ public class BetterPvP
 
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENDERITE);
             event.accept(ModItems.ENDERITE_SCRAP);
             event.accept(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
@@ -59,16 +56,14 @@ public class BetterPvP
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event){
+        public static void onClientSetup(FMLClientSetupEvent event) {
         }
     }
 }

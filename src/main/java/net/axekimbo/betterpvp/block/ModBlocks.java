@@ -4,9 +4,9 @@ import net.axekimbo.betterpvp.BetterPvP;
 import net.axekimbo.betterpvp.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,7 +21,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, BetterPvP.MODID);
 
     public static final RegistryObject<Block> ENDERITE_DEBRIS = registerBlock("enderite_debris",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)));
 
     public static final RegistryObject<Block> ENDERITE_BLOCK = registerBlock("enderite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
