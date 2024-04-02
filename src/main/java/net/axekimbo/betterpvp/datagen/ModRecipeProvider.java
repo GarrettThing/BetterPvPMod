@@ -27,7 +27,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
 
-
         oreSmelting(pRecipeOutput, ENDERITE_DEBRIS, RecipeCategory.MISC, ModItems.ENDERITE_SCRAP.get(), .25f, 200, "enderite_scrap");
         oreBlasting(pRecipeOutput, ENDERITE_DEBRIS, RecipeCategory.MISC, ModItems.ENDERITE_SCRAP.get(), .25f, 100, "enderite_scrap");
 
@@ -37,7 +36,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.ENDERITE_SCRAP.get()), has(ModItems.ENDERITE_SCRAP.get()))
                 .save(pRecipeOutput);
 
-
+        enderiteSmithing(pRecipeOutput, Items.DIAMOND_HELMET,RecipeCategory.MISC, ModItems.ENDERITE_HELMET.get());
+        enderiteSmithing(pRecipeOutput, Items.DIAMOND_CHESTPLATE,RecipeCategory.MISC, ModItems.ENDERITE_CHESTPLATE.get());
+        enderiteSmithing(pRecipeOutput, Items.DIAMOND_LEGGINGS,RecipeCategory.MISC, ModItems.ENDERITE_LEGGINGS.get());
+        enderiteSmithing(pRecipeOutput, Items.DIAMOND_BOOTS,RecipeCategory.MISC, ModItems.ENDERITE_BOOTS.get());
 
 //        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ENDERITE.get(), 9)
 //                .requires(ModBlocks.ENDERITE_BLOCK.get())
@@ -80,5 +82,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pRecipeOutput, BetterPvP.MODID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike));
         }
 
+    }
+    protected static void enderiteSmithing(RecipeOutput pRecipeOutput, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()), Ingredient.of(pIngredientItem), Ingredient.of(ModItems.ENDERITE.get()), pCategory, pResultItem).unlocks("has_enderite_ingot", has(ModItems.ENDERITE.get())).save(pRecipeOutput, getItemName(pResultItem) + "_smithing");
     }
 }

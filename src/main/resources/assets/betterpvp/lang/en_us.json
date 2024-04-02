@@ -6,5 +6,10 @@
   "block.betterpvp.enderite_debris": "Enderite Debris",
   "block.betterpvp.enderite_block": "Block of Enderite",
 
+  "item.betterpvp.enderite_helmet": "Enderite Helmet",
+  "item.betterpvp.enderite_chestplate": "Enderite Chestplate",
+  "item.betterpvp.enderite_leggings": "Enderite Leggings",
+  "item.betterpvp.enderite_boots": "Enderite Boots",
+
   "creativetab.enderite_tab": "Enderite Tab"
 }

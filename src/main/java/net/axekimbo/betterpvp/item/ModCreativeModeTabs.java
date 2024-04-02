@@ -25,7 +25,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ENDERITE_DEBRIS.get());
                         pOutput.accept(ModBlocks.ENDERITE_BLOCK.get());
 
-
+                        pOutput.accept(ModItems.ENDERITE_HELMET.get());
+                        pOutput.accept(ModItems.ENDERITE_CHESTPLATE.get());
+                        pOutput.accept(ModItems.ENDERITE_LEGGINGS.get());
+                        pOutput.accept(ModItems.ENDERITE_BOOTS.get());
                     } )
                     .build());
 
