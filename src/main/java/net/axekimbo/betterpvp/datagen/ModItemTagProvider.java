@@ -28,6 +28,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.ENDERITE_HELMET.get(),
                         ModItems.ENDERITE_CHESTPLATE.get(),
                         ModItems.ENDERITE_LEGGINGS.get(),
-                        ModItems.ENDERITE_BOOTS.get());
+                        ModItems.ENDERITE_BOOTS.get(),
+                        ModItems.MINER_HELMET.get(),
+                        ModItems.MINER_CHESTPLATE.get(),
+                        ModItems.MINER_LEGGINGS.get(),
+                        ModItems.MINER_BOOTS.get(),
+                        ModItems.MINER2_HELMET.get(),
+                        ModItems.MINER2_CHESTPLATE.get(),
+                        ModItems.MINER2_LEGGINGS.get(),
+                        ModItems.MINER2_BOOTS.get()
+                        );
+
     }
 }

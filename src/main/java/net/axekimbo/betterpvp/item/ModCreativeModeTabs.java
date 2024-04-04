@@ -20,7 +20,9 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) ->{
                         pOutput.accept(ModItems.ENDERITE.get());
                         pOutput.accept(ModItems.ENDERITE_SCRAP.get());
+
                         pOutput.accept(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get());
+                        pOutput.accept(ModItems.MINER_UPGRADE_SMITHING_TEMPLATE.get());
 
                         pOutput.accept(ModBlocks.ENDERITE_DEBRIS.get());
                         pOutput.accept(ModBlocks.ENDERITE_BLOCK.get());
@@ -29,6 +31,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ENDERITE_CHESTPLATE.get());
                         pOutput.accept(ModItems.ENDERITE_LEGGINGS.get());
                         pOutput.accept(ModItems.ENDERITE_BOOTS.get());
+
+                        pOutput.accept(ModItems.MINER_HELMET.get());
+                        pOutput.accept(ModItems.MINER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.MINER_LEGGINGS.get());
+                        pOutput.accept(ModItems.MINER_BOOTS.get());
+
+                        pOutput.accept(ModItems.MINER2_HELMET.get());
+                        pOutput.accept(ModItems.MINER2_CHESTPLATE.get());
+                        pOutput.accept(ModItems.MINER2_LEGGINGS.get());
+                        pOutput.accept(ModItems.MINER2_BOOTS.get());
                     } )
                     .build());
 

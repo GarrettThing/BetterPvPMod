@@ -5,13 +5,21 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    ENDERITE("enderite",37,new int[]{3,6,8,3}, 15,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.ENDERITE.get()));
+    ENDERITE("enderite",37,new int[]{3,8,6,3}, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.ENDERITE.get())),
+
+    MINER("miner",15,new int[]{2,5,4,2}, 15,
+    SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(Items.IRON_INGOT)),
+
+    MINER2("miner_2",15,new int[]{2,5,4,2}, 15,
+            SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(Items.IRON_INGOT))
+    ;
 
     private final String name;
     private final int durabilityMultiplier;

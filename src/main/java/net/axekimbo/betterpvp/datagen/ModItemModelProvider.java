@@ -41,12 +41,24 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.ENDERITE);
         simpleItem(ModItems.ENDERITE_SCRAP);
+
         simpleItem(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
+        simpleItem(ModItems.MINER_UPGRADE_SMITHING_TEMPLATE);
 
         trimmedArmorItem(ModItems.ENDERITE_HELMET);
         trimmedArmorItem(ModItems.ENDERITE_CHESTPLATE);
         trimmedArmorItem(ModItems.ENDERITE_LEGGINGS);
         trimmedArmorItem(ModItems.ENDERITE_BOOTS);
+
+        trimmedArmorItem(ModItems.MINER_HELMET);
+        trimmedArmorItem(ModItems.MINER_CHESTPLATE);
+        trimmedArmorItem(ModItems.MINER_LEGGINGS);
+        trimmedArmorItem(ModItems.MINER_BOOTS);
+
+        trimmedArmorItem(ModItems.MINER2_HELMET);
+        trimmedArmorItem(ModItems.MINER2_CHESTPLATE);
+        trimmedArmorItem(ModItems.MINER2_LEGGINGS);
+        trimmedArmorItem(ModItems.MINER2_BOOTS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

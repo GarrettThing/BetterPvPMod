@@ -337,21 +337,11 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 14
+          "weight": 13
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:spire_armor_trim_smithing_template"
-        }
-      ],
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:empty",
-          "weight": 14
         },
         {
           "type": "minecraft:item",
