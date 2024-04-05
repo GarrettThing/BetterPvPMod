@@ -46,12 +46,6 @@ public class BetterPvP {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.ENDERITE);
-            event.accept(ModItems.ENDERITE_SCRAP);
-            event.accept(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
-
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
